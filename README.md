@@ -1,5 +1,6 @@
 # Identificador de hash
-Insira o hash para ser identificado
+Simples identificador de hashs.
+Insira o hash para ser identificado.
 
 # Download
 ~$ git clone
