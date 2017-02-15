@@ -1,5 +1,6 @@
 # Identificador de hash
 Simples identificador das hashs mais comumente usadas.
+
 Insira o hash para ser identificado.
 
 # Download
