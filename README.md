@@ -4,7 +4,7 @@ Simples identificador das hashs mais comumente usadas.
 Insira o hash para ser identificado.
 
 # Download
-~$ git clone
+~$ git clone https://github.com/tarcisio-marinho/identificador_hash.git
 
 ~$ chmod +x identificador_hash.py
 
