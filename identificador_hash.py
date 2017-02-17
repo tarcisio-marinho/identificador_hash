@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # identificador de hashs
 # By Tarcisio Marinho
 # github.com/tarcisio-marinho
