@@ -3,45 +3,41 @@
 # By Tarcisio Marinho
 # github.com/tarcisio-marinho
 
+
+import sys
+
+def help():
+    print("USAGE:\nidentify <hash/hashes>")
+    sys.exit(-1)
+
 def identifier(hash):
     if(hash.isdigit()==False and hash.isalpha()==False and hash.isalnum()==True):
         tam=len(hash)
         if(tam==32):
-            print "[+] md5"
+            print "{} - [+] md5".format(hash)
         elif(tam==56):
-            print "[+] SHA 224"
+            print "{} - [+] SHA 224".format(hash)
         elif(tam==64):
-            print "[+] SHA 256"
+            print "{} - [+] SHA 256".format(hash)
         elif(tam==96):
-            print "[+] SHA 384"
+            print "{} - [+] SHA 384".format(hash)
         elif(tam==128):
-            print "[+] SHA 512"
+            print "{} - [+] SHA 512".format(hash)
         elif (tam==40):
-            print "[+] SHA1"
+            print "{} - [+] SHA1".format(hash)
         elif (tam==16):
-            print "[+] base64"
+            print "{} - [+] base64".format(hash)
         else:
-            print " Hash nao encontrado"
+            print "{} [-] Hash nao encontrado".format(hash)
     else:
-        print "Formato incorreto"
+        print "{} [-] Formato incorreto".format(hash)
     print "\n"
-logo = '''
- .___________________.
- |  ________________ |
- | |               | |
- | | IDENTIFICADOR | |
- | |     de        | |
- | |    HASH       | |
- | |_______________| |
- !___________________!
-     ._[_______]_.
- .___|___________|___.
-'''
-print('BEM VINDO AO IDENTIFICADOR DE HASH!\n')
-linha=' ===================================='
-print(logo)
-while True:
-    print(linha)
-    hash = raw_input("HASH: ")
-    print('\n')
-    identifier(hash)
+
+if __name__ == "__main__":
+    if(len(sys.argv) < 2):
+        help()
+
+    hashes = sys.argv
+    hashes.pop(0)
+    for hash in hashes:
+        identifier(hash)
